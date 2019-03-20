@@ -74,7 +74,7 @@ public class ArrayProductFinder {
 			int rneighbour = i + 1;
 			int leftp = 1;
 			int rightp = 1;
-			if(lneighbour > 0)
+			if(lneighbour >= 0)
 				leftp = ltree.get(lneighbour);
 			if(rneighbour < n)
 				rightp = rtree.get(rneighbour);
