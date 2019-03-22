@@ -1,0 +1,32 @@
+This is your coding interview problem for today.
+
+This problem was asked by Google.
+
+Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
+
+For example, given the following Node class
+
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+The following test should pass:
+
+node = Node('root', Node('left', Node('left.left')), Node('right'))
+assert deserialize(serialize(node)).left.left.val == 'left.left'
+
+Additional Comments:
+The problem is similar to a coding round question of an exceedingly prestigious company, which I also flunked. 
+So the serialized tree depiction I've used is the one asked in that question, because that makes way more sense.
+1(2(..)3(..))
+depicts the tree
+          1
+         / \
+        /   \
+       2     3
+      / \   / \
+     /   \ null null
+   null  null 
+   i.e. '.' represents null values in the serialized string
+   The solution posted is not fault resistant and will only work for correct inputs.
