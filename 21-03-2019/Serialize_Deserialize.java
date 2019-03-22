@@ -19,7 +19,7 @@ public class Serialize_Deserialize {
 		preorder(root);
 		StringBuilder str = new StringBuilder();
 		serialize(root,str);
-		System.out.println(str);
+		System.out.println(str.toString());
 	}
 	private static void serialize(Node node, StringBuilder str)
 	{
@@ -36,8 +36,8 @@ public class Serialize_Deserialize {
 	}
 	private static Node deserialize(String str)
 	{
-		HashMap<Character,Node> map = new HashMap<Character,Node>();
-		Stack<Character> s = new Stack<Character>();
+		HashMap<Character,Node> map = new HashMap<Character,Node>(); //Stores Nodes of characters already found
+		Stack<Character> s = new Stack<Character>(); //iterating through the string
 		int index = 0;
 		while(index < str.length())
 		{
@@ -61,7 +61,7 @@ public class Serialize_Deserialize {
 				index++;
 			}
 		}
-		Node root = map.get(s.peek());
+		Node root = map.get(s.peek()); //only the root hasn't been popped from the stack yet
 		return root;
 	}
 	private static void preorder(Node node)
