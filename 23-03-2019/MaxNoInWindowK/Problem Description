@@ -29,4 +29,5 @@ Testcase 1: Starting from first subarray of size k = 3, we have 3 as maximum. Mo
 
 Additional Resources:
 The standard solution plus a beautiful O(n) solution involving precomputation given here:
-<https://stackoverflow.com/questions/8031939/finding-maximum-for-every-window-of-size-k-in-an-array>
+
+[https://stackoverflow.com/questions/8031939/finding-maximum-for-every-window-of-size-k-in-an-array]
