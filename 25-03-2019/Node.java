@@ -1,4 +1,4 @@
-package treelib;
+//package treelib;
 
 public class Node {
 	public Node left;
